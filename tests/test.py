@@ -9,7 +9,7 @@ class TestBoardmethods(unittest.TestCase):
         # Check if robot is initialised
         self.assertFalse(self.robot._x)
         self.assertFalse(self.robot._y)
-        self.assertFalse(self.robot.face)
+        self.assertFalse(self.robot._face)
 
     def test_robot_ignore_until_placed(self):
         # All movement and rotation should fail before PLACE
@@ -18,7 +18,7 @@ class TestBoardmethods(unittest.TestCase):
         self.assertFalse(self.robot.rotate_right())
 
     def test_robot_placed(self):
-        #Check functionality of robot
+        #Check functionality of robot after place should all work
         self.robot.place(0,0,"NORTH")
         self.assertTrue(self.robot.move())
         self.assertTrue(self.robot.rotate_left())
