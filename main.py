@@ -2,7 +2,7 @@ import os
 from game.game import Game
 
 def main():
-    #Read input text files from test directory
+    #Loops through all input text files from tests/ directory
     for inputfile in os.listdir("tests/"):
         if not inputfile.endswith("txt"):
             continue
